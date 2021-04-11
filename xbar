@@ -1,0 +1,2 @@
+#!/bin/bash
+xmobar -x 1 /home/easton/.xmobarrc2 &
