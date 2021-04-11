@@ -1,0 +1,131 @@
+alias vi="vim"
+alias c="clear"
+alias c.="cd ../"
+alias c..="cd ../../"
+alias sysage="sudo tune2fs -l /dev/sda1"
+alias ytm="ytmdl --nolocal --skip-meta --format mp3 --ignore-errors --url && mv ~/.cache/ytmdl/*mp3 ~/Music"
+alias -g G="| grep"
+alias -g L="| less"
+alias -g LC="| wc -l"
+alias tx="tuxi"
+alias t="xfce4-terminal && tuxi"
+alias obrave="DISPLAY=:0 brave-browser"
+alias r="ranger"
+alias aedit="vi ~/.zsh_aliases"
+alias ts="bpytop"
+alias hm='date +"%H:%M"'
+alias am='alsamixer'
+alias rce='vim /home/eastonpainter/.zsh_aliases'
+alias rcs='source /home/eastonpainter/.zsh_aliases; source /home/eastonpainter/.zshrc'
+alias slp='systemctl suspend'
+alias png='ping -c 5 archlinux.org'
+alias hist='history'
+alias nf='neofetch'
+alias cald='cal && date +"%H:%M:%S"'
+alias icat="kitty +kitten icat"
+alias path="echo $PATH"
+alias cmusr='mv ~/*mp3 ~/Music; mv ~/*mkv ~/Music; mv ~/.cache/ytmdl/*mp3 ~/Music; mv ~/.cache/ytmdl/*mkv ~/Music'
+alias ck='tty-clock -c -C 4'
+alias pf='pfetch'
+alias rf='sudo rm -rf'
+
+# Display settings
+alias lvdsoff='xrandr --auto && xrandr --output LVDS-1-1 --off'
+alias lvdson='xrandr --auto && xrandr --output LVDS-1-1 --on'
+alias hdmioff='xrandr --auto && xrandr --output HMDI-0 --off'
+alias hdmion='xrandr --auto && xrandr --output HMDI-1 --on'
+
+alias vgaon='xrandr --output VGA-1 --auto'
+alias vgaoff='xrandr --output VGA-1 --auto'
+alias dpon='xrandr --output VGA-1 --auto'
+alias dpoff='xrandr --output VGA-1 --auto'
+
+alias exmonad='vi /home/eastonpainter/.xmonad/xmonad.hs'
+alias rbt='sudo systemctl reboot'
+
+### Mullvad ###
+alias mullag='mullvad account get'
+alias mullrl='mullvad relay list'
+alias mullneth='mullvad relay set location nl ams nl4-wireguard'
+alias mulldall='mullvad relay set location us dal us150-wireguard'
+alias mulljapa='mullvad relay set location jp tyo jp9-wireguard'
+alias mullc='mullvad connect'
+alias mulld='mullvad disconnect'
+alias mullru='mullvad relay update'
+alias mulls='mullvad status'
+alias mullacon='mullvad auto-connect set on'
+alias mullacoff='mullvad auto-connect set off'
+
+alias zt='zathura'
+alias img='sxiv' 
+
+alias c="clear"
+alias ch="cd ~"
+alias clh="cd ~ && clear"
+alias cd..='cd ../'
+
+# VPN aliases
+alias vpnup='sudo protonvpn c'
+alias vpnupf='sudo protonvpn c -f'
+alias vpndown='sudo protonvpn d'
+alias vpns='sudo protonvpn s'
+
+# SSH
+alias sshup='sudo systemctl start ssh'
+alias sshdown='sudo systemctl stop ssh'
+alias sshs='sudo systemctl status ssh'
+
+# Time
+alias secs='date +"%T"'
+alias sleep_times='cat ~/notes/sleep_times.txt'
+
+# Wifi/MAC 
+alias macck='sudo echo ENP MAC: && sudo macchanger -s enp10s0 && echo WLP MAC: && sudo macchanger -s wlp3s0'
+alias macwlp='sudo macchanger -r wlp3s0'
+alias macenp='sudo macchanger -r enp10s0'
+alias ogmacwlp='sudo macchanger -p wlp3s0'
+alias ogmacenp='sudo macchanger -p enp10s0'
+alias past_macs='cat ~/notes/info/past_macs.txt'
+alias set_router='sudo macchanger --mac="88:9e:68:ae:4b:ce" enp10s0'
+alias intdown='sudo ip link set enp10s0 down'
+alias intup='sudo ip link set enp10s0 up'
+alias pg='ping -c 3 fsf.org'
+
+# Espanso/Text Expansion
+alias espansoset='cat /home/eastonpainter/.config/espanso/default.yml'
+alias esr='espanso restart'
+
+# DIRC
+alias dirc='discord-irc --config /home/eastonpainter/scripts/irc/config.json'
+alias add_dirc='cat ~/scripts/irc/link.txt'
+
+# Uptime
+alias off='shutdown now -P'
+alias up='uptime -p'
+alias update='sudo apt update && sudo apt upgrade'
+
+# Cargo 
+alias cr='cargo run'
+alias cb='cargo build'
+alias cct='cargo check'
+
+# Wifi password
+alias wp='sudo wifi-password'
+alias guest_wp='sudo wifi-password -q'
+
+# Miscellaneous
+alias dce='cd /home/eastonpainter/Downloads/extentions/discord_chat_exporter/DiscordChatExporter.CLI'
+alias yt='youtube-dl'
+
+alias storage='df -h /'
+alias plvd='celluloid'
+alias router_mac='cat ~/notes/info/router_mac.txt'
+
+alias ytfzf='sh /home/eastonpainter/Downloads/programs/ytfzf.sh'
+alias todo='cat ~/notes/TODO'
+
+alias co='setxkbmap us -variant colemak'
+alias pacs='sudo pacman -S'
+
+## Functions ##
+cl() { cd "$@" && ls; }
